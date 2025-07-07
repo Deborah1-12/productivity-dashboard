@@ -9,11 +9,13 @@
 }
 body.dark-mode{
     background-image: url(/FRONTEND/public/assets/darkmodeimg.jpg);
+    transition: all 2s ease;
 }
 body{
     width: 85vw;
     margin: 1rem auto;
     background: var(--background-image) no-repeat center/cover fixed;
+    transition: all 2s ease;
 }
 header{
     display: flex;

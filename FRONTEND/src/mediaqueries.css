@@ -2,4 +2,10 @@
     header #logo h1{
         display: none;
     }
+    main{
+    display: block;
+    }
+    .card, .card-weather{
+    width: 85vw;
+    }
 }
