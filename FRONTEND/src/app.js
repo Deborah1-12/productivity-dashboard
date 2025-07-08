@@ -20,8 +20,20 @@ const timeout = setInterval(() => {
    const now = new Date();
    const time = now.toTimeString().split(' ')[0];
    timeDisplay.textContent = time;
-   const day = now.getDay();
-   const month = now.getMonth();
-   const year = now.getFullYear();
-   console.log(`${day} ${month} ${year}`);
 }, 100);
+
+const capitalize = word => word.charAt(0).toUpperCase() + word.slice(1);
+
+//date function
+const dateDisplay = document.getElementById('date-display');
+const today = new Date();
+const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const getOrdinal = n =>
+  n > 3 && n < 21 ? `${n}th` :
+  [`st`,`nd`,`rd`][(n % 10) - 1] || `${n}th`;
+
+const formatted = `${capitalize(days[today.getDay()].toLowerCase())} ${getOrdinal(today.getDate())} ${capitalize(months[today.getMonth()].toLowerCase())} ${today.getFullYear()}`;
+
+dateDisplay.textContent = formatted;
