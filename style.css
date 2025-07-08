@@ -6,10 +6,10 @@
 :root{
     --main-color: #006400;
     --text-color: #374151;
-    --background-image: url(/FRONTEND/public/assets/lightmode.jpg);
+    --background-image: url(/assets/lightmode.jpg);
 }
 body.dark-mode{
-    background-image: url(/FRONTEND/public/assets/darkmodeimg.jpg);
+    background-image: url(/assets/darkmodeimg.jpg);
     transition: all 1s ease;
 }
 body{
